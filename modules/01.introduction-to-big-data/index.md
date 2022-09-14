@@ -25,30 +25,52 @@ A distributed system is a group of computers that appear as a unique and coheren
 
 ## Basic knowledge: Horizontal vs vertical scaling
 
-- Vertical scaling: increase the size of the servers = more RAM, more powerful CPUs, more disk space, etc.
-- Horizontal scaling: increase the number of server instead of ther size. Works for distributed systems.
+- **Vertical scaling:** increase the size of the servers = more RAM, more powerful CPUs, more disk space, etc.
+- **Horizontal scaling:** increase the number of server instead of their size. Works for distributed systems.
 
 ## Basic knowledge: Data structure
 
-- Structured: RDBMS tables, Excel
-- Semi-structured: JSON, XML, CSV
-- Unstructured: plain text, images, sound
+- **Structured:** RDBMS tables, Excel sheet
+
+- **Semi-structured:** JSON, XML, CSV
+
+  ```
+  firstname,lastname,birthdate,address
+  Gauthier,Leonard,20220930,Blabla
+  ```
+
+  ```json
+  [
+      {
+          "firstname": "Gauthier",
+          "lastname": "Leonard",
+          "birthdate": 20220930
+  	},
+      {
+          "firstname": "Toto",
+          "lastname": null,
+          "birthdate": "20220803"
+      }
+  ]
+  ```
+
+- **Unstructured:** plain text, images, sound
 
 ## History of data
 
-70's - 00's: RDBMS
+**70's - 00's: RDBMS**
 
-- Data created and used only by technical people
+- Data created and used only by technical people (through programming languages)
 - Non human readable
-- Strongly typed
+- Strongly typed => structured data
 
-2000-2005: Internet rises
+**2000-2005: Internet rises**
 
 - Access to data
-- Readable data, unstructured data
+- Readable data => semi-structured data (HTML), unstructured data (text, images, sound)
 - Beginning of NoSQL
 
-2005-today: Social networks, customer 360
+**2005-today: Social networks**, customer 360
 
 - Data explosion
 - Data created and used by everyone
@@ -92,41 +114,55 @@ Disadvantages:
 
 ## Big Data: The 3 Vs - Variety
 
-- All type of data
+- All types of data
 - 20% structured or semi-structured, 80% unstructured
 
-## Why do we need Big Data?
+## Who needs Big Data?
+
+- Not only GAFAM
+- For "normal" enterprises (where data is not at the core of the business)
+  - Extract value from their data
+  - Build "Data Lakes": gather data from all around the company (+ outside)
 
 ## Big Data clusters
 
-- Cluster: Group of connected computers that can be viewed as a single system
-- Master-slave model
-- Examples:
+- **Cluster:** Group of connected computers that can be viewed as a single system
+- Master-slave (workers) model
+- Examples of "Big Data stacks":
   - Apache Hadoop
   - Elasticsearch
+  - Apache Cassandra
 
 ![Big Data cluster](assets/big-data-cluster.png)
 
 ## The Hadoop Ecosystem
 
-- Distributed Filesystem: HDFS
-- Cluster Manager: YARN
-- Execution Engines: MapReduce, Tez, Spark
-- Warehouse /SQL: Hive
-- NoSQL DB: HBase
-- And other stuff
+- Characteristics
+  - Created in 2006 at Yahoo
+  - Open-source ([Apache Software Foundation](https://github.com/apache))
+  - Java
+  - Linux
+
+- Stack
+  - **Distributed Filesystem:** HDFS (Hadoop DFS)
+  - **Cluster Manager:** YARN (Yet Another Resource Negotiator)
+  - **Execution Engines:** MapReduce, Tez, Spark
+  - **Warehouse/SQL:** Hive
+  - **NoSQL DB:** HBase
+  - And other stuff
+
 
 ## Data jobs: Data Analyst
 
 - Business intelligence
 - Data Mining
-- Visualisation, graphs
+- Visualization, graphs
 - SQL / BI Tools
 
 ## Data jobs: Data Scientist
 
 - Machine Learning / Deep Learning
-- Feature engineering - Visualisation
+- Feature engineering - Visualization
 - Python / R
 
 ## Data jobs: the Data Science hierarchy of needs
@@ -141,7 +177,7 @@ Disadvantages:
 
 ## Data jobs: Data Engineer
 
-Data Engineers are in charge of building the infrastructure to deliver, store and process the data. He collect, move, store and prepare the data.
+Data Engineers are in charge of building the infrastructure to deliver, store and process the data. They collect, move, store and prepare the data.
 
 - Data ingestion and storage
 - Data pipelines and orchestration - Optimization
@@ -149,10 +185,10 @@ Data Engineers are in charge of building the infrastructure to deliver, store an
 
 ## Data jobs: Data Architect
 
-- Data Lake architecture
+- Data Lake (or data platform) architecture
 - Components installation and monitoring
 - Ensure the data is securely accessed and governed
-- Knowledge of all available Big Data tools
+- Knowledge of all available Big Data tools and when to use them
 
 ## Data jobs: Data Something...
 
