@@ -2,6 +2,8 @@
 duration: 3 hours
 ---
 
+[Course drawings](drawings.pdf)
+
 # Introduction to Big Data
 
 Data, and the insight it offers, is essential for business to innovate and differentiate. Coming from a variety of sources, from inside the firewall out to the edge, the growth of data in terms of volume, variety and speed leads to innovative approaches. Today, Data Lakes allow organizations to accumulate huge reservoirs of information for future analysis. At the same time, the Cloud provides easy access to technologies to those who do not have the necessary infrastructure and Artificial Intelligence promises to proactively simplify management.
@@ -41,16 +43,16 @@ A distributed system is a group of computers that appear as a unique and coheren
 
   ```json
   [
-      {
-          "firstname": "Gauthier",
-          "lastname": "Leonard",
-          "birthdate": 20220930
-  	},
-      {
-          "firstname": "Toto",
-          "lastname": null,
-          "birthdate": "20220803"
-      }
+    {
+      "firstname": "Gauthier",
+      "lastname": "Leonard",
+      "birthdate": 20220930
+    },
+    {
+      "firstname": "Toto",
+      "lastname": null,
+      "birthdate": "20220803"
+    }
   ]
   ```
 
@@ -138,6 +140,7 @@ Disadvantages:
 ## The Hadoop Ecosystem
 
 - Characteristics
+
   - Created in 2006 at Yahoo
   - Open-source ([Apache Software Foundation](https://github.com/apache))
   - Java
@@ -150,7 +153,6 @@ Disadvantages:
   - **Warehouse/SQL:** Hive
   - **NoSQL DB:** HBase
   - And other stuff
-
 
 ## Data jobs: Data Analyst
 
