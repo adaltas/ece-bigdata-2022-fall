@@ -54,7 +54,7 @@ To connect via SSH:
 
 ### Linux commands
 
-Now you will try out some Linux commands. Check out this tutorial: [Basic Linux commands](https://maker.pro/linux/tutorial/basic-linux-commands-for-beginners).
+Now you will try out some Linux commands. Check out this tutorial: [The Linux command line for beginners](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview).
 Ultimately, you have to create a file in the folder that your teacher will give you. The file has to:
 
 - Be named after your username with the extension `.txt` (e.g. `gauthier.txt`)
