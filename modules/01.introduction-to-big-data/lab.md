@@ -16,8 +16,8 @@ You should have received an email from Adaltas containing a `.ovpn` file that yo
 ### VPN client installation
 
 1. Depending on your OS, install the OpenVPN client:
-   - On Windows, find the installer here: https://openvpn.net/download-open-vpn/
-   - On Mac, you can use Tunnelblick : Use the official client https://openvpn.net/download-open-vpn/ (or TunnelBlick https://tunnelblick.net/)
+   - On Windows, find the installer here: https://openvpn.net/vpn-client/
+   - On Mac, you can use Tunnelblick : Use the official client https://openvpn.net/vpn-client/ (or TunnelBlick https://tunnelblick.net/)
    - On Linux, if you have Gnome, you can use the `networkmanager-openvpn` package. Otherwise, use your distribution package manager to install the openvpn package.
 2. Import the `.ovpn` file to the client (the way to do so depends on your OS and your client, read the docs!)
 3. Start the VPN connection
