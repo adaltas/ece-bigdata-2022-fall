@@ -25,7 +25,7 @@ To test YARN, we will run the Pi example from the MapReduce example JAR. This is
 
 1. Run the command:
    ```
-   yarn jar /usr/hdp/3.1.0.0-78/hadoop-mapreduce/hadoop-mapreduce-examples-3.1.1.3.1.0.0-78.jar pi 4 100000000
+   yarn jar /usr/hdp/3.1.0.0-78/hadoop-mapreduce/hadoop-mapreduce-examples-3.1.1.3.1.0.0-78.jar pi 6 100000000
    ```
 2. Wait until you find the result
 3. Run the command `yarn app -list` that shows your apps running in YARN
