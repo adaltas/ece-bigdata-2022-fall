@@ -57,6 +57,7 @@ Other distributed architectures?
 
 - **NameNode** (= master): Handles file system metadata. For each file, it knows
 
+  - The path of the file in HDFS
   - The blocks that compose the file
   - The position of each block in the cluster
 
@@ -95,7 +96,7 @@ What is wrong with this architecture? => **SPOF (Single Point of Failure)**
 
 High Availability: more than 1 master (1 **active** + N **standby**)
 
-- Avoid **split-brain problem**: consensus via **ZooKeeper** (quorum)
+- Avoid **split-brain scenario**: consensus via **ZooKeeper** (quorum)
 - Avoid Secondary NameNode SPOF via shared edits = **JournalNodes**
 
 ## HDFS: High Availability mode
