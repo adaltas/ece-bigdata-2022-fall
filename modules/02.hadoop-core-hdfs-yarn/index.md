@@ -125,8 +125,7 @@ Yet Another Resource Negotiator:
 ## YARN: Architecture
 
 - **ResourceManager** (= master):
-
-- - Schedule applications based on available resources
+  - Schedule applications based on available resources
   - Gather information about running applications
 
 - **NodeManager** (= worker): Handle resources on one worker
@@ -148,8 +147,7 @@ Components (JVMs) of an application:
 ## YARN: Resource sharing
 
 - Queues
-
-- - CentraleSupelec - 70% 100%
+  - ECE 70% 100%
 
   - - APP - 50% 100%
     - INI - 50% 100%

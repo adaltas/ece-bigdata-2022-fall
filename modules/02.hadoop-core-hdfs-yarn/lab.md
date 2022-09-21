@@ -30,6 +30,10 @@ To test YARN, we will run the Pi example from the MapReduce example JAR. This is
 2. Wait until you find the result
 3. Run the command `yarn app -list` that shows your apps running in YARN
 
+### Setting up password-less SSH
+
+Follow tutorial: [How to Setup Passwordless SSH Login](https://linuxize.com/post/how-to-setup-passwordless-ssh-login/)
+
 ### Accessing Hadoop Web UIs using Kerberos
 
 To see the Hadoop Web UIs, you will need to configure your computer. The Kerberos protocol is used to authenticate.
