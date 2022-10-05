@@ -24,9 +24,19 @@ duration: 3 hours
 ## Query data on HDFS
 
 - Enables to query data **already** on HDFS
+
 - Supports **multiple file formats**:
   - Readable semi-structured (CSV, JSON…)
-  - Optimized file format (**ORC**, Parquet, Avro)
+  
+    ```json
+    [
+        {"key1": "value1", "key2": "value2"},
+        {"key1": "value1", "key2": "value2"}
+    ]
+    ```
+  
+  - Optimized file format (**ORC**, **Parquet**, Avro)
+  
 - Can also read data from other systems : HBase, Kafka, PostgreSQL, etc.
 
 ## Data file formats
@@ -36,7 +46,7 @@ duration: 3 hours
   - Embedded statistics on data
   - Embedded schema
   - Exemples: Apache ORC, Apache Parquet
-- Exchange file formats: Apache Avro, Protocol Buﬀers
+- Exchange file formats: Apache Avro, Protocol Buﬀers, Apache Arrow
 
 ![Columnar vs. Row-oriented atorage](./assets/columnar_row_storage.jpg)
 

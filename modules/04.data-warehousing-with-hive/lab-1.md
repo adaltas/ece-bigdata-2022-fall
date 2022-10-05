@@ -59,7 +59,7 @@ STORED AS ORC;
    2. The column `name` devided into `first_name` and `last_name`
    3. The column `location` renamed as `address` (because `LOCATION` is a Hive keyword)
    4. The column `certified` as a `BOOLEAN`
-2. Check that your table was created using the HDFS CLI at `/warehouse/tablespace/managed/hive/ece_2022_fall_bda_1.db/${hiveUsername}_nyc_drivers` (should be empty)
+2. Check that your table was created using the HDFS CLI at `/warehouse/tablespace/managed/hive/ece_2022_fall_bda_1.db/${USER}_nyc_drivers` (should be empty)
 
 ### Load data from the CSV table to the ORC table
 
