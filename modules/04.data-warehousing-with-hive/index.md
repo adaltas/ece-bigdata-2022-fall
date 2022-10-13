@@ -74,7 +74,7 @@ duration: 3 hours
 ## Hive partitions
 
 - Tables can (**should**) be organized in partitions
-  - Divide a table into related parts based on the values of particular columns (e.g. date, country, etc.)
+  - Divide a table into related parts based on the values of particular columns (e.g. **date**, country, etc.)
   - Enables to query parts of the data (avoid full scan)
   - There should not be to many (small files problem)
   - 1 partition = 1 subfolder in HDFS
@@ -83,11 +83,3 @@ duration: 3 hours
 ## Bronze/silver/gold paradigm
 
 ![bronze/silver/gold](./assets/bronze-silver-gold.png)
-
-## To go further
-
-- Views
-  - Hive 3: materialized views
-- Hive LLAP
-  - Caching mechanism for faster queries
-  - Useful for BI tools and Apache Druid
