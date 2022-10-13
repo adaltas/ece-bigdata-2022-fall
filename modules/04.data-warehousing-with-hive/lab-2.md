@@ -21,7 +21,7 @@ For more informations about the datasets: [IMDb Datasets](https://www.imdb.com/i
 ### Queries
 
 1. Number of titles with duration superior than 2 hours.
-2. Average duration of titles containing the word "world" (but not words like "Underworld").
+2. Average duration of titles containing the word "world" (but not words like "Underworld"). Hint: use `RLIKE` (see [RegExr](https://regexr.com/))
 3. Average rating of titles having the genre "Comedy"
 4. Average rating of titles not having the genre "Comedy"
 5. Top 5 movies directed by Tarantino
