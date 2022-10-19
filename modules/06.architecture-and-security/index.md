@@ -55,7 +55,7 @@ LDAP = Lightweight Directory Access Protocol
 - Stores **users** and **groups**
 - Allows **identification** (“this user exists and belongs to those groups”)
 - Also stores passwords for basic authentication
-- Examples: OpenLDAP, FreeIPA, Active Directory
+- Examples: OpenLDAP, FreeIPA, Active Directory (Microsoft)
 
 ![LDAP process](./assets/ldap_process.png)
 

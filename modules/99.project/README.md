@@ -33,6 +33,11 @@ Architecture/design:
 
 - Uber wants to track all its drivers in real-time in order to predict the areas most likely to be in need for drivers (what technologies will be used to: transport data, store data, analyse data, present results, etc.)
 
+## Adaltas Cloud links
+
+- YARN: http://yarn-rm-2.au.adaltas.cloud:8088/ui2/index.html
+- Zeppelin: http://zep-1.au.adaltas.cloud:9995/#/
+
 ## Distributed systems examples
 
 - Platforms: Hadoop, Elasticsearch, Kubernetes
