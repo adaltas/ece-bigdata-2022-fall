@@ -11,7 +11,7 @@ duration: 3 hours
   - Examples : Redis, Memcache (in memory)
 - **Columnar**:
   - 1 key = X values stored in columns
-  - Examples : Apache HBase, Apache Cassandra
+  - Examples : Apache HBase, Apache Cassandra (ScyllaDB)
 - **Document stores**:
   - JSON/XML like objects
   - Examples : MongoDB, CouchDB
