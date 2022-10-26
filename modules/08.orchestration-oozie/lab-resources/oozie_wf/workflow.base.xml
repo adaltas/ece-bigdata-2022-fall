@@ -1,0 +1,47 @@
+<workflow-app xmlns = "uri:oozie:workflow:0.4" name = "drivers_ingestion">
+  <global>
+    <job-tracker>${jobTracker}</job-tracker>
+    <name-node>${nameNode}</name-node>
+  </global>
+
+  <credentials>
+    <credential name="hive-creds" type="hive2">
+      <property>
+        <name>hive2.server.principal</name>
+        <value>${hivePrincipal}</value>
+      </property>
+      <property>
+        <name>hive2.jdbc.url</name>
+        <value>${jdbcUrl}</value>
+      </property>
+    </credential>
+  </credentials>
+
+  <start to = "create_csv_table" />
+
+  <!-- 
+    Some HDFS actions could be done bebore.
+    For example, you can consider that the file is added to a transit zone in a folder with today's date as name.
+    You need to move/copy it to the csv table folder.
+  -->
+
+  <action name = "create_csv_table" cred="hive-creds">
+    <hive2 xmlns = "uri:oozie:hive2-action:0.2">
+      <!-- Complete here -->
+      <param>username=${username}</param>
+      <param>group=${group}</param>
+    </hive2>
+    <ok to = "end" />
+    <error to = "kill_job" />
+  </action>
+
+  <!-- Rest of the steps here  -->
+
+
+
+  <kill name = "kill_job">
+    <message>Job failed</message>
+  </kill>
+
+  <end name = "end" />
+</workflow-app>
