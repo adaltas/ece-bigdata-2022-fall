@@ -10,7 +10,7 @@ Chain the Hive actions done in [lab4](../lab4) using Oozie.
 
 The Oozie workflow is composed of:
 
-- The `workflow.base.xml` that contains all the actions to be run (you will have to complete this file)
+- The `workflow.xml` that contains the DAG of actions to be run (you will have to complete this file)
 - The `job.properties` file that contains the job properties, you will have to modify some of them
 - The `scripts` folder that will contain our Hive scripts
 
