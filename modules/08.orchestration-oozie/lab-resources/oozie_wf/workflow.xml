@@ -17,13 +17,18 @@
     </credential>
   </credentials>
 
-  <start to="create_csv_table" />
+  <start to="fork_create_tables" />
 
   <!-- 
     Some HDFS actions could be done bebore.
     For example, you can consider that the file is added to a transit zone in a folder with today's date as name.
     You need to move/copy it to the csv table folder.
   -->
+
+  <fork name="fork_create_tables">
+    <path start="create_csv_table" />
+    <path start="create_orc_table" />
+  </fork>
 
   <action name="create_csv_table" cred="hive-creds">
     <hive2 xmlns="uri:oozie:hive2-action:0.2">
@@ -33,11 +38,33 @@
       <param>clusterUsername=${clusterUsername}</param>
       <param>group=${group}</param>
     </hive2>
-    <ok to="end" />
+    <ok to="join_create_tables" />
     <error to="kill_job" />
   </action>
 
-  <!-- Rest of the steps here  -->
+  <action name="create_orc_table" cred="hive-creds">
+    <hive2 xmlns="uri:oozie:hive2-action:0.2">
+      <jdbc-url>${jdbcUrl}</jdbc-url>
+      <script>scripts/create_drivers_orc.hql</script>
+      <param>hiveUsername=${hiveUsername}</param>
+      <param>group=${group}</param>
+    </hive2>
+    <ok to="join_create_tables" />
+    <error to="kill_job" />
+  </action>
+
+  <join name="join_create_tables" to="insert_orc_from_csv" />
+
+  <action name="insert_orc_from_csv" cred="hive-creds">
+    <hive2 xmlns="uri:oozie:hive2-action:0.2">
+      <jdbc-url>${jdbcUrl}</jdbc-url>
+      <script>scripts/insert_drivers_orc.hql</script>
+      <param>hiveUsername=${hiveUsername}</param>
+      <param>group=${group}</param>
+    </hive2>
+    <ok to="end" />
+    <error to="kill_job" />
+  </action>
 
   <kill name="kill_job">
     <message>Job failed</message>
