@@ -5,7 +5,7 @@
 The project has to focus on **Open Source distributed systems**. It can either be:
 
 - A **technical project**, that can be installing a stack of technologies and/or writing code to process data on the stack. It has to include the **implementation**: code, configuration files. In this case:
-  - The code has to be hosted on a **Git repository**
+  - The code has to be hosted on a **public Git repository**
   - The code has to be **documented** (READMEs, inline comments)
   - The **project report** has to include a clear description of the project, the steps to implement it and a list of problems encountered
 - A **architecture/design project**, meaning that you will design a platform based on distributed systems for a particular use case. You will only write a project report that includes:
